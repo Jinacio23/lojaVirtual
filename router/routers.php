@@ -4,8 +4,22 @@
 // '/caminhoDefinido' => 'NomeController'@'action'
 
 $routes = [
-    '/' => 'HomeController@index',
-    '/home' => 'HomeController@index',
-    '/users/{id}' => 'UserController@show',
-    '/teste' => 'TesteController@index',
+    '/' => 'EstoqueController@index',
+    
+    //home
+    '/estoque' => 'EstoqueController@index',
+
+    //cadastro
+    '/cadastro' => 'CadastroController@index',
+    '/cadastroPag' => 'CadastroPagController@index',
+
+    //Pagamentos
+    '/pagamentos' => 'PagamentoController@index',
+
+    //loja
+    '/loja' => 'LojaController@index',
+
+    //carrinho
+    '/carrinho' => 'CarrinhoController@index',
+
 ];

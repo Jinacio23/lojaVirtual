@@ -1,10 +1,10 @@
 <?php
 
 class Database{
-    private $database = 'bdaula';
-    private $host = 'localhost';
+    private $database = 'bdAula';
+    private $host = 'laradock-mysql-1';
     private $user = "root";
-    private $password = "";
+    private $password = "root";
 
 
     public function getConnection(){

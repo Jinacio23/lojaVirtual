@@ -15,10 +15,10 @@ class UserModel extends Database
 
         //Mysqli
         
-        $sql = "SELECT * FROM aluno";
-        $query = mysqli_query($this->mysqli, $sql);
-        $result = mysqli_fetch_all($query);
-        return $result;
+        //$sql = "SELECT * FROM aluno";
+        //$query = mysqli_query($this->mysqli, $sql);
+        //$result = mysqli_fetch_all($query);
+        //return $result;
 
         //---- em PDO -----
         //
