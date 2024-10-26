@@ -4,20 +4,26 @@
 // '/caminhoDefinido' => 'NomeController'@'action'
 
 $routes = [
-    '/' => 'EstoqueController@index',
-    
-    //home
-    '/estoque' => 'EstoqueController@index',
-
-    //cadastro
-    '/cadastro' => 'CadastroController@index',
-    '/cadastroPag' => 'CadastroPagController@index',
-
-    //Pagamentos
-    '/pagamentos' => 'PagamentoController@index',
+    '/' => 'LojaController@index',
 
     //loja
     '/loja' => 'LojaController@index',
+
+    //login
+    '/login' => 'LoginController@index',
+    
+    //estoque
+    '/estoque' => 'EstoqueController@index',
+
+    //cadastros
+    '/cadastro' => 'CadastroController@index',
+
+    '/cadastro-produto' => 'CadastroProdutoController@index',
+
+    '/cadastro-pagamento' => 'CadastroPagController@index',
+
+    //Recibo
+    '/recibo' => 'ReciboController@index',
 
     //carrinho
     '/carrinho' => 'CarrinhoController@index',

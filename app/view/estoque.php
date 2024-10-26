@@ -77,7 +77,7 @@
           <td> <button class="btn btn-primary">Editar</button>
             <button class="btn btn-danger">Excluir<button>
         </tr>
-        <button type="button" class="button-hover-backgroun>Adicionar novo Produto"> Cadastra Novo Produto</button>
+        <a href="cadastro-produto"><button type="button" class="button-hover-backgroun>Adicionar novo Produto"> Cadastra Novo Produto</button></a>
       </tbody>
 
     </table>
