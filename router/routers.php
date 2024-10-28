@@ -14,6 +14,11 @@ $routes = [
     
     //estoque
     '/estoque' => 'EstoqueController@index',
+    '/estoque-create' => 'EstoqueController@create',
+    '/estoque-store' => 'EstoqueController@store',
+    '/estoque-edit/{id}' => 'EstoqueController@edit',
+    '/estoque-update/{id}' => 'EstoqueController@update',
+    '/estoque-delete/{id}' => 'EstoqueController@delete',
 
     //cadastros
     '/cadastro' => 'CadastroController@index',

@@ -49,34 +49,25 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1 Barra de Chocolate</th>
-          <td>4 unidade</td>
-          <td>9,90</td>
-          <td>Barra de chocolate lacta shot de 80g</td>
-          <td>12/12/24</td>
-         <td> <button class="btn btn-primary me-2">Editar</button> 
-          <button class="btn btn-danger">Excluir<button>
-        </td>
-        </tr>
-        <tr>
-          <th scope="row">2  Caixa de bombom</th>
-          <td>4 unidade</td>
-          <td>12,45 </td>
-          <td>Caixa de bombom nestle 251g</td>
-          <td>13/12/24</td>
-          <td> <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Excluir<button>
-        </tr>
-        <tr>
-          <th scope="row">3 Café</th>
-          <td>4 unidade</td>
-          <td>19,99</td>
-          <td>Café do Sitío de 500g</td>
-          <td>25/12/24</td>
-          <td> <button class="btn btn-primary">Editar</button>
-            <button class="btn btn-danger">Excluir<button>
-        </tr>
+        <?php foreach($produtos as $produto){?>
+          <tr>
+            <th scope="row"><?php echo $produto[1]; ?></th>
+            <td><?php echo $produto[4]; ?></td>
+            <td><?php echo $produto[3]; ?></td>
+            <td><?php echo $produto[2]; ?></td>
+            <td><?php echo 'null'; ?></td>
+
+            <td> 
+              <a href=<?php echo "estoque-edit/$produto[0]"; ?>>
+                <button class="btn btn-primary me-2">Editar</button>
+              </a> 
+              <a href=<?php echo "estoque-delete/$produto[0]"; ?>>
+                <button class="btn btn-danger">Excluir<button>
+              </a>
+            </td>
+          </tr>
+        <?php }; ?>
+        
         <a href="cadastro-produto"><button type="button" class="button-hover-backgroun>Adicionar novo Produto"> Cadastra Novo Produto</button></a>
       </tbody>
 

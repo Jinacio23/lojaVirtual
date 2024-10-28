@@ -2,9 +2,9 @@
 
 class Database{
     private $database = 'ecommerce';
-    private $host = 'localhost';
+    private $host = 'laradock-mysql-1';
     private $user = "root";
-    private $password = "";
+    private $password = "root";
 
 
     public function getConnection(){
