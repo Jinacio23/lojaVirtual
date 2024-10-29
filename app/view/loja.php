@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,25 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #333;
             color: white;
             padding: 10px;
             text-align: center;
         }
+
         .container {
             padding: 20px;
         }
+
         .product-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: space-around;
         }
+
         .product-card {
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -32,10 +37,12 @@
             text-align: center;
             width: 250px;
         }
+
         .product-card img {
             width: 100%;
             height: auto;
         }
+
         .product-card button {
             background-color: #28a745;
             color: white;
@@ -45,9 +52,11 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .product-card button:hover {
             background-color: #218838;
         }
+
         .cart-link {
             text-decoration: none;
             color: white;
@@ -59,11 +68,13 @@
             padding: 10px 15px;
             border-radius: 5px;
         }
+
         .cart-link:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -77,7 +88,7 @@
         <div class="product-grid">
             <!-- Produto 1 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Produto 1">
+                <img src="https://www.ebaymotorsblog.com/motors/blog/wp-content/uploads/2013/05/uship-_eBay-Motors_May-Photo.jpg-740x480.jpeg" alt="Produto 1">
                 <h3>Produto 1</h3>
                 <p>Descrição do produto 1</p>
                 <p><strong>R$ 100,00</strong></p>
@@ -86,7 +97,7 @@
 
             <!-- Produto 2 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Produto 2">
+                <img src="https://live.staticflickr.com/3004/5791118782_415c1860ab_z.jpg" alt="Produto 2">
                 <h3>Produto 2</h3>
                 <p>Descrição do produto 2</p>
                 <p><strong>R$ 150,00</strong></p>
@@ -95,7 +106,7 @@
 
             <!-- Produto 3 -->
             <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Produto 3">
+                <img src="https://i.pinimg.com/736x/58/2e/b8/582eb8ff4e402b690c5a00c0bdebf08e--chevrolet-convertible.jpg" alt="Produto 3">
                 <h3>Produto 3</h3>
                 <p>Descrição do produto 3</p>
                 <p><strong>R$ 200,00</strong></p>
@@ -105,4 +116,5 @@
     </div>
 
 </body>
+
 </html>
