@@ -1,6 +1,6 @@
 <?php
 
-class UserModel extends Database
+class ProductModel extends Database
 {
 
     private $mysqli;
@@ -13,7 +13,7 @@ class UserModel extends Database
     public function fetch()//Buscar por registros
     {
   
-        $sql = "SELECT * FROM usuarios";
+        $sql = "SELECT * FROM produtos";
         $query = mysqli_query($this->mysqli, $sql);
         return mysqli_fetch_all($query);
         
@@ -21,7 +21,7 @@ class UserModel extends Database
 
     public function fetchById($id)//Buscar registros por ID
     {
-        $sql = "SELECT * FROM usuarios WHERE id='$id'";
+        $sql = "SELECT * FROM produtos WHERE id='$id'";
         $query = mysqli_query($this->mysqli, $sql);
         $result = mysqli_fetch_all($query);
         return $result[0];

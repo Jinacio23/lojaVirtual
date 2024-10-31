@@ -36,6 +36,8 @@ class Core
                 $part = str_word_count($dir, 1, ':');
                 array_pop($part);
 
+
+                
                 if($part[0] == 'C:'){
                     //Para Windows
                     $newDir = implode('/', $part)."/";

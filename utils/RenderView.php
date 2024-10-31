@@ -6,7 +6,7 @@ class RenderView
     //Carregando view requisitada
     //loadView(nomeDaView, arrayDeArgumentos)
     //Na controller correspondente - Ex.: loadView('test', ['nome' => 'Jubileu'])
-    public function loadView($view, $args)
+    public function loadView($view, $args=[])
     {
         extract($args);
 
