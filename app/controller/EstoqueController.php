@@ -1,39 +1,81 @@
-<?php 
+<?php
 
-class EstoqueController extends RenderView{
+class EstoqueController extends RenderView
+{
 
-public function index(){
+    public function index()
+    {
 
-    $bd = new ProductModel();
+        $bd = new ProductModel();
 
-    $this->loadView('estoque', [
-        'produtos' => $bd->fetch()
-    ]);
+        $this->loadView('estoque', [
+            'produtos' => $bd->fetch()
+        ]);
 
-}
+    }
 
-public function create(){
+    public function create()
+    {
 
-    $this->loadView('cadastroProduto');
+        $this->loadView('cadastroProduto');
 
-}
+    }
 
-public function store(){
+    public function store()
+    {
 
-    echo 'Action store';
+        $bd = new ProductModel();
 
-}
+        $name = $_POST['name'];
+        $estoque = $_POST['estoque'];
+        $preco = $_POST['preco'];
+        $description = $_POST['description'];
 
-public function edit($id){
-    echo 'Action edit - id: '.$id[0];
-}
+        $sql = "INSERT INTO produtos (nome,descricao,preco,quantidade) 
+        VALUES ('$name','$description','$preco','$estoque');";
 
-public function update($id){
-    echo 'Action update - id: '.$id[0];
-}
+        $bd->query($sql);
 
-public function delete($id){
-    echo 'Action delete - id: '.$id[0];
-}
+        header('Location: estoque');
+
+    }
+
+    public function edit($id)
+    {
+        $bd = new ProductModel();
+
+        $this->loadView('atualizarProduto',[
+            'id' => $id[0],
+            'dados' => $bd->fetchById($id[0])
+        ]);
+    }
+
+    public function update($id)
+    {
+        $bd = new ProductModel();
+
+        $name = $_POST['name'];
+        $estoque = $_POST['estoque'];
+        $preco = $_POST['preco'];
+        $description = $_POST['description'];
+
+        $sql = "UPDATE produtos 
+        SET nome='$name', descricao='$description', preco='$preco', quantidade='$estoque' WHERE id='$id[0]'";
+
+        $bd->query($sql);
+        
+        header('Location: ../estoque');
+    }
+
+    public function delete($id)
+    {
+        $bd = new ProductModel();
+
+        $sql = "DELETE FROM produtos WHERE id='$id[0]'";
+
+        $bd->query($sql);
+        
+        header('Location: ../estoque');
+    }
 
 }

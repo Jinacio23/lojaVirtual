@@ -23,8 +23,6 @@ $routes = [
     //cadastros
     '/cadastro' => 'CadastroController@index',
 
-    '/cadastro-produto' => 'CadastroProdutoController@index',
-
     '/cadastro-pagamento' => 'CadastroPagController@index',
 
     //Recibo

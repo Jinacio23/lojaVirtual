@@ -68,7 +68,7 @@
           </tr>
         <?php }; ?>
         
-        <a href="cadastro-produto"><button type="button" class="button-hover-backgroun>Adicionar novo Produto"> Cadastra Novo Produto</button></a>
+        <a href="estoque-create"><button type="button" class="button-hover-backgroun>Adicionar novo Produto"> Cadastra Novo Produto</button></a>
       </tbody>
 
     </table>
