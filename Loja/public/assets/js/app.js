@@ -6,6 +6,7 @@ let listCartHTML = document.querySelector('.listCart');
 let iconCartSpan = document.querySelector('.icon-cart span');
 let totalPriceHTML = document.querySelector('.totalPrice');
 
+
 let listProduct = [];
 let carts = [];
 
@@ -18,16 +19,16 @@ closeCart.addEventListener('click', () => {
 
 const addDataToHTML = () => {
     listProductHTML.innerHTML = '';
-        if (listProduct.length > 0) {
-            listProduct.forEach(product => {
+    if (listProduct.length > 0) {
+        listProduct.forEach(product => {
+                let url = img + '/' + product.image;
                 let newProduct = document.createElement('div');
                 newProduct.classList.add('item','col-lg-4', 'menu-item');
                 newProduct.dataset.id = product.id;
                 newProduct.innerHTML = `
-                    <img class="menu-img img-fluid" src="${product.price}" alt="">
+                    <img class="menu-img img-fluid" src="${url}" alt="{{ product.name }}">
                     <h4>${product.name}</h4>
-                    <p class="price">${product.price}</p>
-                    <p class="quantity">$${product.quantity}</p>
+                    <p class="price">R$ ${product.price}</p>
                     <button type="button" class="addCart btn btn-sm btn-outline-warning button-hover-background fs-6">Adicionar ao carrinho</button>
                 `;
                 listProductHTML.appendChild(newProduct);
@@ -78,7 +79,7 @@ const addDataToHTML = () => {
                 let info = listProduct[positionProduct];
                 newCart.innerHTML = `
                     <div class="image">
-                        <img src="${info.price}" alt="">
+                        <img src="${img}/${info.image}" alt="">
                     </div>
                     <div class="name">
                         ${info.name}

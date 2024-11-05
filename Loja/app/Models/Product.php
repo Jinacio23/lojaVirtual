@@ -9,6 +9,6 @@ class Product extends Model
     protected $filable = [
         'name',
         'price',
-        'quantity'
+        'image'
     ];
 }
