@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ReciboController extends Controller
+class CadastroPagController extends Controller
 {
     function index(){
-        return view("recibo");
+        return view("cadastropag");
     }
 }

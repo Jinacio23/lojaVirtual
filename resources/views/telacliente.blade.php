@@ -68,7 +68,7 @@
 
     <header>
         <h1>Loja Online</h1>
-        <a class="cart-link" href="carrinho.html">Carrinho de Compras</a>
+        <a class="cart-link" href="carrinho">Carrinho de Compras</a>
         <a href="login" style="color: #fff;">login</a>
         <a href="estoque" style="color: #fff;">Admin</a>
     </header>

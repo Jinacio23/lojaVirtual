@@ -120,7 +120,9 @@
             Total: R$ 600,00
         </div>
 
-        <button class="checkout-button">Finalizar Compra</button>
+        <a href="cadastroPag">
+            <button class="checkout-button">Finalizar Compra</button>
+        </a>
     </div>
 
 </body>

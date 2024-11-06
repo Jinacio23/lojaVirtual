@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\CadastroController;
+use App\Http\Controllers\CadastroPagController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\EstoqueController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LojaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReciboController;
 use App\Http\Controllers\TesteController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,10 +45,13 @@ Route::delete('destroy/{id}', [EstoqueController::class, 'destroy'])->name('esto
 
 
 //cadastro
-Route::get('/cadastro' , [CadastroController::class, 'index'])->name('cadastro.index');
+//Route::get('/cadastro' , [CadastroController::class, 'index'])->name('cadastro.index');
+
+//cadastroPagamneto
+Route::get('/cadastroPag' , [CadastroPagController::class, 'index'])->name('cadastroPag.index');
 
 //Recibo
-//Route::get('/recibo' , [ReciboController::class, 'index'])->name('recibo.index');
+Route::get('/recibo' , [ReciboController::class, 'index'])->name('recibo.index');
 
 //carrinho
 Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.index');

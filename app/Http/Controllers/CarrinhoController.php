@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class CarrinhoController extends Controller
 {
-    //
+    function index(){
+        return view("telacarrinho");
+    }
 }

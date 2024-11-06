@@ -28,10 +28,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./loja.html">LOJA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./sobre.html">SOBRE</a>
+              <a class="nav-link" href="/">LOJA</a>
             </li>
           </ul>
         </div>

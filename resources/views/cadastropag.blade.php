@@ -90,6 +90,7 @@
 
             <!-- Botão de Enviar -->
             <button type="submit">Confirmar Pagamento</button>
+            <a href="recibo">Recibo</a>
         </form>
     </div>
 
