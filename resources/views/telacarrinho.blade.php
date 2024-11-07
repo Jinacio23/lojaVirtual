@@ -89,7 +89,19 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Produto 1 -->
+
+            <?php foreach ($items as $item) { ?>
+                <!-- Produto -->
+                <tr>
+                    <td>{{$item['title']}}</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>{{$item['preco']}}</td>
+                    <td>R$ 100,00</td>
+                    <td><button class="remove-button">Remover</button></td>
+                </tr>
+            </div>
+            <?php } ?>
+                <!-- Produto 1 
                 <tr>
                     <td>Produto 1</td>
                     <td><input type="number" value="1" min="1"></td>
@@ -97,7 +109,7 @@
                     <td>R$ 100,00</td>
                     <td><button class="remove-button">Remover</button></td>
                 </tr>
-                <!-- Produto 2 -->
+                Produto 2 
                 <tr>
                     <td>Produto 2</td>
                     <td><input type="number" value="2" min="1"></td>
@@ -105,14 +117,14 @@
                     <td>R$ 300,00</td>
                     <td><button class="remove-button">Remover</button></td>
                 </tr>
-                <!-- Produto 3 -->
+                Produto 3 
                 <tr>
                     <td>Produto 3</td>
                     <td><input type="number" value="1" min="1"></td>
                     <td>R$ 200,00</td>
                     <td>R$ 200,00</td>
                     <td><button class="remove-button">Remover</button></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
@@ -120,7 +132,7 @@
             Total: R$ 600,00
         </div>
 
-        <a href="cadastroPag">
+        <a href={{route('cadastroPag.index')}}>
             <button class="checkout-button">Finalizar Compra</button>
         </a>
     </div>

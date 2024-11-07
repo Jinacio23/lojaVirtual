@@ -61,7 +61,7 @@
 
     <div class="container">
         <h1>Cadastro de Pagamento</h1>
-        <form action="/processar-pagamento" method="post">
+        <form action={{route('cadastroPag.store')}} method="post">
             <!-- Campo Nome -->
             <label for="nome">Nome Completo</label>
             <input type="text" id="nome" name="nome" required>
@@ -90,7 +90,7 @@
 
             <!-- Botão de Enviar -->
             <button type="submit">Confirmar Pagamento</button>
-            <a href="recibo">Recibo</a>
+            <a href="recibo">Recibo</a>{{/*Quando houver a tla de recibo de pagamento os dados deverão ser recuperados nela}}
         </form>
     </div>
 

@@ -65,10 +65,9 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>Loja Online</h1>
-        <a class="cart-link" href="carrinho">Carrinho de Compras</a>
+        <a class="cart-link" href={{route('carrinho.index')}}>Carrinho de Compras</a>
         <a href="login" style="color: #fff;">login</a>
         <a href="estoque" style="color: #fff;">Admin</a>
     </header>
@@ -76,32 +75,17 @@
     <div class="container">
         <h2>Produtos Disponíveis</h2>
         <div class="product-grid">
-            <!-- Produto 1 -->
-            <div class="product-card">
+
+            <?php foreach ($dados as $produto) { ?>
+                <!-- Produto -->
+                <div class="product-card">
                 <img src="https://via.placeholder.com/200" alt="Produto 1">
-                <h3>Produto 1</h3>
-                <p>Descrição do produto 1</p>
-                <p><strong>R$ 100,00</strong></p>
-                <button>Adicionar ao Carrinho</button>
+                <h3>{{$produto['title']}}</h3>
+                <p>{{$produto['descricao']}}</p>
+                <p><strong>{{$produto['preco']}}</strong></p>
+                <a href={{route('carrinho.update',$produto['id'])}}><button>Adicionar ao Carrinho</button></a>
             </div>
-
-            <!-- Produto 2 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Produto 2">
-                <h3>Produto 2</h3>
-                <p>Descrição do produto 2</p>
-                <p><strong>R$ 150,00</strong></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-
-            <!-- Produto 3 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/200" alt="Produto 3">
-                <h3>Produto 3</h3>
-                <p>Descrição do produto 3</p>
-                <p><strong>R$ 200,00</strong></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
+            <?php } ?>
         </div>
     </div>
 

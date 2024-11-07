@@ -11,9 +11,7 @@ use App\Http\Controllers\ReciboController;
 use App\Http\Controllers\TesteController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('telacliente');
-});
+Route::get('/', [LojaController::class, 'index'])->name('loja.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -49,11 +47,13 @@ Route::delete('destroy/{id}', [EstoqueController::class, 'destroy'])->name('esto
 
 //cadastroPagamneto
 Route::get('/cadastroPag' , [CadastroPagController::class, 'index'])->name('cadastroPag.index');
+Route::post('store' , [CadastroPagController::class, 'store'])->name('cadastroPag.store');
 
 //Recibo
 Route::get('/recibo' , [ReciboController::class, 'index'])->name('recibo.index');
 
 //carrinho
 Route::get('/carrinho' , [CarrinhoController::class, 'index'])->name('carrinho.index');
+Route::get('update/{id}', [CarrinhoController::class, 'update'])->name('carrinho.update');
 
 require __DIR__.'/auth.php';
